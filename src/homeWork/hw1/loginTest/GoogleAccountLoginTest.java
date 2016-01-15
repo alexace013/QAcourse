@@ -1,4 +1,4 @@
-package homeWork.hw1;
+package homeWork.hw1.loginTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

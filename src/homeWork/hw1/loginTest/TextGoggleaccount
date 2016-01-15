@@ -1,0 +1,81 @@
+- Prior to the actual scripting, we need to import the above packages:
+
+* import org.openqa.selenium.WebDriver – References the WebDriver interface which is
+required to instantiate a new web browser.
+
+* import org.openqa.selenium.firefox.FirefoxDriver – References the FirefoxDriver
+class that is required instantiate a Firefox specific driver on the browser instance
+instantiated using WebDriver interface.
+
+* import org.openqa.selenium.WebElement – References to the WebElement class which
+is required to instantiate a new web element.
+
+* import org.openqa.selenium.By – References to the By class on which a locator
+type is called.
+
+
+- Launching the Web browser
+
+* driver.get(url);
+A get() method is called on the WebDriver instance to launch a fresh web browser instance.
+The string character sequence passed as a parameter into the get() method redirects the launched
+web browser instance to the application URL.
+
+
+- Maximize Browser Window
+
+* driver.manage().window().maximize();
+The maximize() method is used to maximize the browser window soon after it is re-directed
+to the application URL.
+
+
+- Fetch the page Title
+
+* driver.getTitle();
+The getTitle() method is used to fetch the title of the current web page.
+Thus, the fetched title can be loaded to a string variable.
+
+
+- WebElement Instantiation
+
+* WebElement username = driver.findElement(By.id(“Email”));
+In the above statement, we instantiate the WebElement reference with the help of
+“driver.findElement(By.id(“Email”))”. Thus, username can be used to reference the Email
+textbox on the user interface every time we want to perform some action on it.
+
+- Clear Command
+
+* username.clear();
+The clear() method/command is used to clear the value present in the textbox if any.
+It also clears the default placeholder value.
+
+
+- sendKeys Command
+
+* username.sendKeys(“TestSelenium “);
+The sendKeys() method/command is used to enter/type the specified value (within the parentheses )
+in the textbox. Notice that the sendKeys() method is called on the WebElement object
+which was instantiated with the help of element property corresponding to the UI element.
+The above block of code enters the string “TestSelenium” inside the Email textbox on the Gmail application.
+sendKeys is one of the most popularly used commands across the WebDriver scripts.
+
+
+- Click Command
+
+* SignInButton.click();
+Like sendKeys(), click() is another excessively used command to interact with the web elements.
+Click() command/method is used to click on the web element present on the web page.
+The above block of code clicks on the “Sign in” button present on the Gmail application.
+
+
+- Close the Web Browser
+
+* driver.close();
+The close() is used to close the current browser window.
+
+
+- Terminate the Java Program
+
+* System.exit(0);
+The Exit() method terminates the Java program forcefully.
+Thus, remember to close all the browser instances prior terminating the Java Program.
