@@ -1,0 +1,161 @@
+#http://www.ellos.se/
+
+#button=xpath(//a[@id='btnActivateOffer']);
+#searchBox=xpath(//div[@class='searchBox ac_wrapper']);
+#subMenu=xpath(//span[contains(text(),'Dam')]);
+#flag=xpath(//a[@class='flag footer-sprite se no-margin']);
+#content=xpath(//div[@class='newsletter']/a[@id='youtube-submit']);
+#guidedNavigation=xpath(//li[@class='listItem loaded'][7]//h4[contains(text(),'Fynda')]);
+#splashContainer=xpath(//div[@class='splash_brand_spot sprite']/a[3]);
+#mainContentContainer=xpath(a#instagram-submit);
+#phoneText=xpath(//strong[contains(text(),'Självbetjäning:')]);
+#title=xpath(//div[contains(text(),'501 86, Borås')]);
+
+
+#10
+#http://www.ellos.se/hem/basics_1
+
+#ms_top=css(div.ms_top_header>h1);
+#paymentFooter=css(div.safe-payment-wrapper a[class='payment footer-sprite visa']);
+#button=css(div[id='shopingBagPayment']);
+#buttonHome=css(div.WideBreadcrumbListPage a);
+#price=css(li[data-position='3'] span.price);
+#li=css(ul.sortValues li:nth-of-type(5));
+#android=css(//span[contains(text(), 'Android')]);
+#site=css(li.friends a:nth-of-type(2));
+#img=css(li[data-position="35"] div.carouselWrapper img);	3 attachments
+#a=css(div.pagingWrapper a:nth-of-type(6));
+
+
+#20
+#http://www.ellos.se/elektronik/tv
+
+#img=css(li[data-position='10'] img.productImage.lazyload);
+#a=css(div.guidedNavigation.topCategories li:nth-of-type(5) a);	3 attachments
+#span=css(ul[id='ProductDepartment'] li:nth-of-type(2) span);	3 attachments
+#div=xpath(//div[@id='footer']//div[@class='phone-customer-img footer-sprite']);
+#div=xpath(//div[@class='optionsWrapper bottom']/div[1]);
+#span=css(span[class='linkItem linkItemLast']);
+#img=xpath(//li[@data-position='33']//img[@class='productImage lazyload']);
+#img=css(li[data-position='3'] img[class='articleImage']);
+#li=xpath(//li[@data-position='13']//span[@class='price']);
+#li=xpath(//li[@data-position='16']//div[@class='headlineWrapper']);
+#a=css(a[class='flag footer-sprite dk no-margin']);
+#div=xpath(//a[1]//li[2]);
+
+
+#30
+#http://www.ellos.se/inspiration/valskodd/1267
+
+#img=img(div.magaSectionImg img);
+#a=css(div[class='magalogueSocialShareItemsContainer'] a:nth-of-type(3));
+#li=xpath(//span[contains(text(),'Tag 3 betala för 2')]);
+#a=xpath(//a[@class='payment footer-sprite cod-se']);
+#div=css(div[class='magaSectionPicture'] img); 1
+
+
+#35
+#http://www.ellos.se/sport/swimming
+
+#a=xpath(//ul[@id='Brand']//a[contains(text(),'adidas')]);
+#a=xpath(//a[contains(text(),'adidas')]);
+#li=xpath(//li[@data-position='34']/a[@class='productLink']);
+#li=xpath(//li[@data-position='35']//div[@class='carouselWrapper']);
+#a=xpath(//li[@data-position='2']//img[@class='productImage lazyload']);
+#h2(swimming)=css(h2[class~="category"]);
+#h2=css(h2);
+
+
+#40
+#http://www.ellos.se/dam/skor/stovlar?Ns=Freshness|0
+
+#li=xpath(//li[@data-position='10']//div[@class='posLeft rating_medium rating_5']);
+#img=xpath(//li[@data-position='9']//div[@class='LabelBelowProduct']/img);	1
+#img=xpath(//li[@data-position='9']//img[@title='Skinn']);			2 title is correct?
+#li=css(li[data-position='22'] span[class='price']);
+#class=css(li[data-position='31'] div[class='headlineWrapper']);
+#li=xpath(//li[@data-position='37']//span[@class='price']);
+#li=css(li[data-position='53'] ul[class='sizeList '] li:nth-of-type(3));	3 attachments
+#span=css(li[class='breadBoxListItem']:nth-of-type(3) span);
+#a=css(ul#SizeFilter li:nth-of-type(10) a);	3 attachments
+#a=css(li[class='safe'] a:nth-of-type(3));
+
+
+#50
+#http://www.ellos.se/dam/skor/boots-kangor/vinterskor_1?Ns=Freshness|0
+
+#span=xpath(//li[@data-position='12']//span[@class='price']);
+#title=xpath(//li[@data-position='13']//img[@class='articleImage']);
+#class=xpath(//li[@data-position='35']//img[@class='active']);
+#class=css(li[data-position='52'] span[class='price']);
+#a=css(div[class='brand-wrapper'] a:nth-of-type(14));
+#class=xpath(//li[@data-position='22']//img[@class='articleImage']);
+#a=xpath(//li[@class='listItem'][1]/a[contains(text(), 'Lån')]);
+#img=xpath(//li[@data-position='43']//img[@class='productImage lazyload']);
+#span=css(div[class='phone'] span:nth-of-type(3));
+#span=css(div[class='quicklinksColumn']:nth-of-type(1) span);
+
+
+#60
+#http://www.ellos.se/inspiration/hem-inredning_MzhfMg
+
+#li=css(li:nth-of-type(5) img.magalogueListpageListItemImage.lazy);
+#p=css(div[class='magalogueWrapper'] li:nth-of-type(1) p);		----------
+#span=xpath(//ul[@id='magalogueListpageListContainer']/li[5]//span[@class='date']);
+#h2=xpath(//ul[@class='magalogueSpacing']/li[8]//h2); 1
+#	h2=xpath(//li[8]//h2); 2
+#img=css(li:nth-of-type(39) img);
+#a=xpath(//li[39]//a[@class='magalogueTagsListItemLink']);
+#div=css(div[class='right-column'] div[class='text']);
+#div=xpath(//li[@class='countries']/div);
+#li=css(li:nth-of-type(49) li:nth-of-type(2));
+#p=xpath(//li[47]//p);
+
+
+#70
+#http://www.ellos.se/g/finance/insuranceRedcatsSecurity?menuId=90520BDF-6E71-43B1-B689-C1F6AB2EBA81
+
+#img=xpath(//h1/img);
+#img=xpath(//div[@class='mainContentContainer']//h1/img);
+#span=xpath(//li[@class='listItem loaded'][3]//ul[1]/li[2]//span[2]);	??? (4 attachments)
+#a=xpath(//li[@class='listItem loaded'][10]//ul[5]//a[5]);
+#span=xpath(//li[12]//span[contains(text(),'Sport')]);
+#h4=xpath(//h4[contains(text(),'Mattor')]);
+#img=xpath(//p[3]/img);
+#a=css(li[class='section customer-service'] li:nth-of-type(3) a); 1
+#	a=css(li.section.customer-service li:nth-of-type(3) a); 2
+#span=css(li.listItem.loaded:nth-of-type(6) ul:nth-of-type(2) li:nth-of-type(2) span.txt);
+#span=css(a.cartPanelLink.anchor span.cartImage); 1
+#	span=css(a[class='cartPanelLink anchor'] span.cartImage); 2
+
+
+#80
+#http://www.ellos.se/hem/mobler/rea
+
+#img=css(li.productWrapper.hasCarousel:nth-of-type(33) img.active);
+#img=xpath(//li[@data-position='35']//img[@class='articleImage']);
+#a=xpath(//ul[@id='Color']//a[contains(text(), 'Blå')]);
+#li=css(#Brand li:nth-of-type(7)); 
+#	question: How to apply the element 'a=text=>JaBaDaBaDo'???
+#img=xpath(//li[@data-position='41']//li[1]/img);	3 attachments
+#img=scc(li[data-position='35'] img[class='productImage lazyload']);
+#a=xpath(//a[@class='flag footer-sprite fi']);
+#a=css(div[class='pagingWrapper'] a:nth-of-type(3));
+#li=xpath(//ul[@class='sortValues']/li[4]);
+#div=css(div[class='villkor_spot']);
+
+#90
+#http://www.ellos.se/plus/herr
+
+#li=css(li[data-position='2'] ul[class='sizeList'] li:nth-of-type(3));	3 attachments
+#img=xpath(//li[@data-position='10']//li[@class='swiper-slide article ']/img);
+#div=css(li[data-position='16'] div[ class='highlightPush']);
+#img=xpath(//li[@data-position='57']//img[@class='productImage lazyload']);
+#div=css(li[data-position='22'] div[class='carouselWrapper']);
+#li=xpath(//li[@data-position='28']//ul[1]/li[contains(text(),'2XL')]);	3 attachments
+#img=css(li[data-position='16'] img[class='productImage lazyload']);
+#span=xpath(//span[contains(text(),'Lakan')]);
+#span=css(span[class='cartImage']);
+#span=xpath(//span[contains(text(),'Sport is doing it together')]);
+
+#100
