@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="selenium-server-2.48.2-sources">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-server-2.48.2/selenium-server-2.48.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-server-2.48.2/selenium-server-2.48.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
