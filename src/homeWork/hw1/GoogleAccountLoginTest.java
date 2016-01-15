@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * write tests to login functional using WebElementsActions class
  */
 
-public class GmailLogin {
+public class GoogleAccountLoginTest {
 
     public static void main(String[] args) {
 
@@ -21,7 +21,7 @@ public class GmailLogin {
 
         driver.manage().window().maximize();
 
-        String testedTitle = "Sign in Google Accounts";
+        String testedTitle = "Sign in - Google Accounts";
 
         String actualTitle = driver.getTitle();
 
@@ -42,7 +42,7 @@ public class GmailLogin {
         clickButton.click();
 
         try {
-            Thread.sleep(2000L);
+            Thread.sleep(1000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -56,7 +56,11 @@ public class GmailLogin {
         SignInButton.click();
 
         // close the web browser
-        driver.close();
+
+        if (driver != null) {
+            driver.close();
+        }
+
         System.out.println("Test script executed successfully.");
 
         // terminate the program
