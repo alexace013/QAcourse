@@ -42,7 +42,7 @@
 #text=xpath(//a[1]//li[2]);
 
 
-#linkhttp://www.ellos.se/inspiration/valskodd/1267
+#link=http://www.ellos.se/inspiration/valskodd/1267
 
 #productBootImage=img(div.magaSectionImg img);
 #linkTwitter=css(div[class='magalogueSocialShareItemsContainer'] a:nth-of-type(3));
