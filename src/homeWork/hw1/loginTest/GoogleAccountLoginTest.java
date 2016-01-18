@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * write tests to login functional using WebElementsActions class
+ * write tests to login functional using WebElementsActions2 class
  */
 
 public class GoogleAccountLoginTest {
