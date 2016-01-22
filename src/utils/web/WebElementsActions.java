@@ -1,8 +1,11 @@
-package weekend.week1.day2.web;
+package utils.web;
 
+import utils.ConfigData;
 import org.openqa.selenium.interactions.Actions;
-import weekend.week1.day2.exceptions.NoElementFound;
+import utils.web.exceptions.NoElementFound;
 import org.openqa.selenium.*;
+
+import java.io.IOException;
 
 public class WebElementsActions {
 
@@ -13,17 +16,24 @@ public class WebElementsActions {
     }
 
     /**
+     * open page
+     */
+    public void openPage(String url) {
+        driver.get(url);
+    }
+
+    /**
      * Insert value into text input HTML field
-     * */
-    public void input(String inputLocator, String inputData) {
-        driver.findElement(By.xpath(inputLocator)).clear();
-        driver.findElement(By.xpath(inputLocator)).sendKeys(inputData);
+     */
+    public void input(String inputLocator, String inputData) throws IOException {
+//        driver.findElement(ConfigurationData.ui(inputLocator)).clear();
+        driver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
     }
 
     /**
      * Insert value into text input HTML field and Click ENTER
      * for Field which used in the xpath expression
-     * */
+     */
     public void inputAndClickEnter(String inputLocator, String inputData) {
 
         try {
@@ -38,25 +48,23 @@ public class WebElementsActions {
 
     /**
      * Click a button
-     * */
-    public void clickButton(String buttonLocator) {
+     */
+    public void clickButton(String buttonLocator) throws IOException {
+        driver.findElement(ConfigData.ui(buttonLocator)).click();
+    }
 
-        try {
-            driver.findElement(By.xpath(buttonLocator)).click();
-        } catch (NoElementFound noElementFound) {
-            noElementFound.printStackTrace();
-        }
-
+    public void click(String link) throws IOException {
+        driver.findElement(ConfigData.ui(link)).click();
     }
 
     /**
      * Click link
-     * */
-    public void clickLink(String linkLocator) {
-        driver.findElement(By.xpath(linkLocator)).click();
+     */
+    public void clickLink(String linkLocator) throws IOException {
+        driver.findElement(ConfigData.ui(linkLocator)).click();
     }
 
-    public void moveToElementAndClick(String movToLocator, String clickToElement) {
+    public void moveToElementAndClick(String movToLocator, String clickToElement) throws IOException {
 
         WebElement webElement = null;
 
@@ -80,7 +88,7 @@ public class WebElementsActions {
 
     /**
      * Select/deselect the checkbox, the second parameter "Y" or "N"
-     * */
+     */
     public void selectCheckBox(String checkBoxLocator, String isCheckBoxSelect) {
 
         if (driver.findElement(By.xpath(checkBoxLocator)).isSelected() & isCheckBoxSelect.equals("N")) {
@@ -95,8 +103,8 @@ public class WebElementsActions {
 
     /**
      * Method is used to check that element is present on page
-     * */
-    public boolean isElementPresent(String elementLocator) {
+     */
+    public boolean isElementPresentBy(String elementLocator) {
 
         if (!driver.findElement(By.xpath(elementLocator)).isDisplayed()) {
             return false;
@@ -106,9 +114,19 @@ public class WebElementsActions {
 
     }
 
+    public boolean isElementPresentConfig(String elementLocator) throws IOException {
+
+        if (!driver.findElement(ConfigData.ui(elementLocator)).isDisplayed()) {
+            return false;
+        }
+
+        return true;
+
+    }
+
     /**
      * This method is used to agree messages on pop-up windows
-     * */
+     */
     public boolean isAlertPresentAndAccept() {
 
         boolean alertPresence = false;
@@ -129,7 +147,7 @@ public class WebElementsActions {
 
     /**
      * This method is used to agree messages on pop-up windows
-     * */
+     */
     public String getAlertText() {
 
         String alertText;
@@ -149,9 +167,21 @@ public class WebElementsActions {
 
     /**
      * First method for refresh page
-     * */
+     */
     public void refreshPage() {
         driver.navigate().refresh();
     }
 
+    public void clearAndInputWithBy(String inputLocator, String inputData) {
+        driver.findElement(By.xpath(inputLocator)).clear();
+        driver.findElement(By.xpath(inputLocator)).sendKeys(inputData);
+    }
+
+    public void clearAndInputWithConfigData(String inputLocator, String inputData) throws IOException {
+        driver.findElement(ConfigData.ui(inputLocator)).clear();
+        driver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
+    }
+
+
 }
+

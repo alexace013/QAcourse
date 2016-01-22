@@ -1,4 +1,4 @@
-package weekend.week1.day2.exceptions;
+package utils.web.exceptions;
 
 import java.util.NoSuchElementException;
 
