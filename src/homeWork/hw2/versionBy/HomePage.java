@@ -8,18 +8,18 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-    private static final String URL = "http://www.ellos.se/";
+    private static String url = "http://www.ellos.se/";
 
     private WebDriver driver;
 
     /**
      * user name
-     * */
+     */
     @FindBy
     private WebElement userName;
 
     public HomePage(WebDriver driver) {
-        PageFactory.initElements(driver, URL);
+        PageFactory.initElements(driver, url);
         this.driver = driver;
     }
 

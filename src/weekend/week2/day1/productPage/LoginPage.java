@@ -1,18 +1,18 @@
 package weekend.week2.day1.productPage;
 
 import org.openqa.selenium.WebDriver;
-import utils.web.WebElementsActions;
+import utils.web._WebElementsActions;
 
 import java.io.IOException;
 
 public class LoginPage {
 
     WebDriver driver;
-    WebElementsActions web;
+    _WebElementsActions web;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        web = new WebElementsActions(driver);
+        web = new _WebElementsActions(driver);
     }
 
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    private static final String URL = "https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f";
+    private static  String url = "https://www.ellos.se/LoginAndRegistration/Login?returnUrl=%2f";
 
 //    private static final String TITLE = "Mode & kläder online – köp dina kläder på nätet | Ellos";
 
@@ -19,10 +19,10 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
 
-        PageFactory.initElements(driver, URL);
+        PageFactory.initElements(driver, url);
         this.driver = driver;
 
-//        if (!URL.equals(driver.getCurrentUrl())) {
+//        if (!url.equals(driver.getCurrentUrl())) {
 //            throw new IllegalStateException("This is not the login page");
 //        }
 

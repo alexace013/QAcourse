@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.By;
+
 import java.io.IOException;
 import java.util.Properties;
 

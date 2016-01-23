@@ -1,5 +1,6 @@
-package weekend.week2.day1.pageFactory;
+package homeWork.hw2.versionConfigData;
 
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,10 +13,15 @@ import java.util.concurrent.TimeUnit;
 
 public class PageFactoryLoginTest {
 
+    Logger log = Logger.getLogger(PageFactoryLoginTest.class);
+
     private static final String EMAIL = "alex_ace@ukr.net";
     private static final String PASSWORD = "a1989";
+    private static String URL = "http://www.ellos.se/";
+
     WebDriver driver;
-    PageFactoryMainPage pageFactoryMainPage;
+
+    PageFactoryHomePage pageFactoryHomePage;
     PageFactoryLoginPage pageFactoryLoginPage;
 
     @Before
@@ -23,20 +29,20 @@ public class PageFactoryLoginTest {
 
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        System.out.println("Browser open successful.");
+        log.info(String.format("browser %s open successful.", driver.getClass().getName()));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://www.ellos.se/");
-        System.out.println("Start test...");
+        driver.get(URL);
+        log.info(String.format("start test."));
 
     }
 
     @Test
     public void testMethod1() throws IOException {
 
-        pageFactoryMainPage = new PageFactoryMainPage(driver);
-        pageFactoryMainPage.closeBlurb();
-        pageFactoryMainPage.clickLogoLink();
-        pageFactoryMainPage.switchToLoginPage();
+        pageFactoryHomePage = new PageFactoryHomePage(driver);
+        pageFactoryHomePage.closeBlurb();
+        pageFactoryHomePage.clickLogoLink();
+        pageFactoryHomePage.switchToLoginPage();
 
         pageFactoryLoginPage = new PageFactoryLoginPage(driver);
         pageFactoryLoginPage.fillEmailFiled(EMAIL);
@@ -51,7 +57,7 @@ public class PageFactoryLoginTest {
 
     @After
     public void tearDown() {
-        System.out.println("end test.");
+        log.info(String.format("end test."));
         driver.quit();
     }
 

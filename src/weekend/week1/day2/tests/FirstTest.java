@@ -8,8 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
 import static org.testng.AssertJUnit.fail;
 
 public class FirstTest {
@@ -31,16 +33,22 @@ public class FirstTest {
         driver.findElement(By.id("lst-ib")).clear();
         driver.findElement(By.id("lst-ib")).sendKeys("artcode");
         driver.findElement(By.name("btnG")).click();
-        for (int second = 0;; second++) {
+        for (int second = 0; ; second++) {
             if (second >= 60) fail("timeout");
-            try { if (isElementPresent(By.linkText("курсы программирования от Art Code"))) break; } catch (Exception e) {}
+            try {
+                if (isElementPresent(By.linkText("курсы программирования от Art Code"))) break;
+            } catch (Exception e) {
+            }
             Thread.sleep(1000);
         }
 
         driver.findElement(By.linkText("курсы программирования от Art Code")).click();
-        for (int second = 0;; second++) {
+        for (int second = 0; ; second++) {
             if (second >= 60) fail("timeout");
-            try { if (isElementPresent(By.linkText("Курсы"))) break; } catch (Exception e) {}
+            try {
+                if (isElementPresent(By.linkText("Курсы"))) break;
+            } catch (Exception e) {
+            }
             Thread.sleep(1000);
         }
 

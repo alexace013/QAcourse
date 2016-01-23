@@ -7,11 +7,11 @@ import org.openqa.selenium.*;
 
 import java.io.IOException;
 
-public class WebElementsActions {
+public class _WebElementsActions {
 
     WebDriver driver;
 
-    public WebElementsActions(WebDriver driver) {
+    public _WebElementsActions(WebDriver driver) {
         this.driver = driver;
     }
 
