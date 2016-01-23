@@ -81,39 +81,52 @@ public class ConfigurationData {
      */
     public By getLocator(String elementName) throws ConfigurationDataException {
 
-        //Read value using the elementName as Key
+        // Read value using the elementName as Key
         String locator = properties.getProperty(elementName);
-        //Split the value which contains locator type and locator value
+        // Split the value which contains locator type and locator value
         String locatorType = locator.split("\"")[0];
         String locatorValue = locator.split("\"")[1];
+        // A temporary variable to store the desired value
+        By temp = null;
 
-        if (checkLocatorCase(locatorType).equals("id")) {
-            return By.id(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("name")) {
-            return By.name(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("className") ||
-                checkLocatorCase(locatorType).equals("class")) {
-            return By.className(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("linkText") ||
-                checkLocatorCase(locatorType).equals("link")) {
-            return By.linkText(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("tagName") ||
-                checkLocatorCase(locatorType).equals("tag")) {
-            return By.tagName(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("cssSelector") ||
-                checkLocatorCase(locatorType).equals("css")) {
-            return By.cssSelector(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("xpath")) {
-            return By.xpath(locatorValue);
-        } else if (checkLocatorCase(locatorType).equals("partialLinkText")) {
-            return By.partialLinkText(locatorValue);
-        } else {
-            throw new ConfigurationDataException("Locator type '" +
-                    locatorType + "' not defined!!");
+        switch (locatorType) {
+            case "id":
+                temp = By.id(locatorValue);
+                break;
+            case "name":
+                temp = By.name(locatorValue);
+                break;
+            case "className":
+                temp = By.className(locatorValue);
+                break;
+            case "linkText":
+                temp = By.linkText(locatorValue);
+                break;
+            case "tagName":
+                temp = By.tagName(locatorValue);
+                break;
+            case "cssSelector":
+                temp = By.cssSelector(locatorValue);
+                break;
+            case "xpath":
+                temp = By.xpath(locatorValue);
+                break;
+            case "partialLinkText":
+                temp = By.partialLinkText(locatorValue);
+                break;
+            default:
+                throw new ConfigurationDataException(
+                        String.format("Locator type '%s'  not defined!", locatorType));
         }
-
+        return temp;
     }
 
+    /**
+     * @param key you need to pass a link locator
+     * @return Locator using the By class
+     * @method ui must will read the locator details from the
+     * properties file and create locator (using the By class)
+     */
     public By ui(String key) throws IOException {
 
         String[] partsOfLocators = getValueFromStaticFile(key).split("\"");

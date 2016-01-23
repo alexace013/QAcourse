@@ -15,8 +15,8 @@ public class PageFactoryLoginTest {
 
     Logger log = Logger.getLogger(PageFactoryLoginTest.class);
 
-    private static final String EMAIL = "alex_ace@ukr.net";
-    private static final String PASSWORD = "a1989";
+    private static String EMAIL = "alex_ace@ukr.net";
+    private static String PASSWORD = "a1989";
     private static String URL = "http://www.ellos.se/";
 
     WebDriver driver;

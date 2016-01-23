@@ -7,6 +7,10 @@
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-server-2.48.2/selenium-server-2.48.2-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-server-2.48.2/selenium-server-2.48.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-1-master.zip!/selenium-1-master/java/client/src" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-1-master.zip!/selenium-1-master/java/client/test" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-1-master.zip!/selenium-1-master/java/server/src" />
+      <root url="jar://$PROJECT_DIR$/../../../Quality Assurance (QA)/files/selenium-1-master.zip!/selenium-1-master/java/server/test" />
     </SOURCES>
   </library>
 </component>
