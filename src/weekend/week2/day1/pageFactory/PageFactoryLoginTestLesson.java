@@ -25,7 +25,7 @@ public class PageFactoryLoginTestLesson {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         System.out.println("Browser open successful.");
-        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://www.ellos.se/");
         System.out.println("Start test...");
 
@@ -35,7 +35,7 @@ public class PageFactoryLoginTestLesson {
     public void testMethod1() throws IOException {
 
         pageFactoryMainPage = new PageFactoryMainPageLesson(driver);
-//        pageFactoryMainPage.closeBlurb();
+        pageFactoryMainPage.closeBlurb();
         pageFactoryMainPage.clickLogoLink();
         pageFactoryMainPage.switchToLoginPage();
 

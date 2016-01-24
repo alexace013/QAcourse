@@ -10,19 +10,19 @@ public class PageFactoryLoginPage {
 
     Logger log = Logger.getLogger(PageFactoryLoginPage.class);
 
-    @FindBy(css = "loginField")
+    @FindBy(xpath = ".//input[@id='ctl00_ctl00_conMain_conMain_LoginControl_LoginUsername']")
     WebElement emailField;
 
-    @FindBy(xpath = "passFieldInput1")
+    @FindBy(xpath = ".//input[@id='LoginPasswordText']")
     WebElement passField1;
 
-    @FindBy(xpath = "PassFieldInput2")
+    @FindBy(xpath = ".//input[@id='ctl00_ctl00_conMain_conMain_LoginControl_LoginPassword']")
     WebElement passField2;
 
-    @FindBy(xpath = "loginButton")
+    @FindBy(xpath = ".//a[@id='ctl00_ctl00_conMain_conMain_LoginControl_LoginButton']")
     WebElement loginButton;
 
-    @FindBy(xpath = "errorMessage")
+    @FindBy(xpath = ".//div[@id='serverValidationErrors']/ul")
     WebElement errorMessage;
 
     private WebDriver driver;
@@ -38,6 +38,7 @@ public class PageFactoryLoginPage {
     }
 
     public void fillEmailFiled(String email) {
+        emailField.click();
         emailField.clear();
         emailField.sendKeys(email);
         log.info(String.format("%s clear and send \"%s\"", emailField, email));
@@ -48,6 +49,13 @@ public class PageFactoryLoginPage {
         passField2.sendKeys(password);
         log.info(String.format("%s clear and send in %s \"%s\"",
                 passField1, passField2, password));
+    }
+
+    public void fillPassFiled2(String password) {
+//        passField1.click();
+        passField2.sendKeys(password);
+        log.info(String.format("send in %s \"%s\"",
+                passField2, password));
     }
 
     public boolean isErrorMessage() {

@@ -10,17 +10,32 @@ public class PageFactoryHomePage {
 
     Logger log = Logger.getLogger(PageFactoryHomePage.class);
 
-    @FindBy(css = "logoLink")
+    @FindBy(css = ".ellos.active")
     WebElement logoLink;
 
-    @FindBy(xpath = "loginPageLink")
+    @FindBy(css = "#showlogin>span")
     WebElement loginPageLink;
 
-    @FindBy(xpath = "loginFieldInput")
+    @FindBy(css = "#ctl00_ctl00_conMain_conMain_LoginControl_LoginUsername")
     WebElement loginFieldInput;
 
-    @FindBy(xpath = "buttonSpam")
+    @FindBy(css = "div#Content div.closeButton")
     WebElement buttonSpam;
+
+    @FindBy(css = "#showlogout")
+    WebElement linkLogOut;
+
+//    @FindBy(css = "logoLink")
+//    WebElement logoLink;
+//
+//    @FindBy(xpath = "loginPageLink")
+//    WebElement loginPageLink;
+//
+//    @FindBy(xpath = "loginFieldInput")
+//    WebElement loginFieldInput;
+//
+//    @FindBy(xpath = "buttonSpam")
+//    WebElement buttonSpam;
 
     private WebDriver driver;
 
@@ -50,6 +65,12 @@ public class PageFactoryHomePage {
             log.info(String.format("Switch to loginPage was INCORRECT."));
         }
 
+    }
+
+    public void logOut() {
+
+        linkLogOut.click();
+        log.info(String.format("click on Log Out"));
     }
 
 }

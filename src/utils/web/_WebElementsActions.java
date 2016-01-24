@@ -26,7 +26,7 @@ public class _WebElementsActions {
      * Insert value into text input HTML field
      */
     public void input(String inputLocator, String inputData) throws IOException {
-//        driver.findElement(ConfigurationData.ui(inputLocator)).clear();
+//        driver.findElement(ConfigurationData11.ui(inputLocator)).clear();
         driver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
     }
 

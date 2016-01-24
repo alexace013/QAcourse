@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class WebElementsActions {
 
     Logger log = Logger.getLogger("log4j.rootLogger");
@@ -26,12 +28,12 @@ public class WebElementsActions {
         log.info(String.format("open page: %s" + url));
     }
 
-    public void input(String inputLocator, String data) throws ConfigurationDataException {
+    public void input(String inputLocator, String data) throws ConfigurationDataException, IOException {
         driver.findElement(config.getLocator(inputLocator)).sendKeys(data);
         log.info(String.format("input %s and send %s", inputLocator, data));
     }
 
-    public void click(String clickLocator) throws ConfigurationDataException {
+    public void click(String clickLocator) throws ConfigurationDataException, IOException {
         driver.findElement(config.getLocator(clickLocator)).click();
         log.info(String.format("click on element: %s", clickLocator));
     }
@@ -46,26 +48,23 @@ public class WebElementsActions {
 
             log.info(String.format("%s send %s and click enter.", inputAndClickLocator, data));
 
-        } catch (ConfigurationDataException e) {
-
+        } catch (IOException e) {
             e.printStackTrace();
-            log.info(String.format("ConfigurationDataException %s", e.getMessage()));
-
         }
 
     }
 
-    public void clickButton(String buttonLocator) throws ConfigurationDataException {
+    public void clickButton(String buttonLocator) throws ConfigurationDataException, IOException {
         driver.findElement(config.getLocator(buttonLocator)).click();
         log.info(String.format("click on %s", buttonLocator));
     }
 
-    public void clickLink(String linkLocator) throws ConfigurationDataException {
+    public void clickLink(String linkLocator) throws ConfigurationDataException, IOException {
         driver.findElement(config.getLocator(linkLocator)).click();
         log.info(String.format("click on %s", linkLocator));
     }
 
-    public boolean isElementPresentBy(String elementLocator) throws ConfigurationDataException {
+    public boolean isElementPresentBy(String elementLocator) throws ConfigurationDataException, IOException {
 
         if (!driver.findElement(config.getLocator(elementLocator)).isDisplayed()) {
 
@@ -110,7 +109,7 @@ public class WebElementsActions {
     }
 
     public void clearAndInputWithConfigurationData(String inputLocator, String inputData)
-            throws ConfigurationDataException {
+            throws ConfigurationDataException, IOException {
 
         driver.findElement(config.getLocator(inputLocator)).clear();
         driver.findElement(config.getLocator(inputLocator)).sendKeys(inputData);
