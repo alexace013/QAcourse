@@ -1,19 +1,19 @@
-package utils;
+package weekend.utils;
 
 import org.openqa.selenium.By;
 
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigData {
+public class ConfigData_Lesson {
 
-    public static String uiMappingFile = "/weekend/week2/day1/productPage/WeekendUIMapping.properties";
+    public static String uiMappingFile = "/weekend/utils/WeekendUIMapping.properties";
 
     public static String getValueFromFile(String key, String fileName) throws IOException {
 
         Properties properties = new Properties();
 
-        properties.load(ConfigData.class.getResourceAsStream(uiMappingFile));
+        properties.load(ConfigData_Lesson.class.getResourceAsStream(uiMappingFile));
 
         return properties.getProperty(key);
 

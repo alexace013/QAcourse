@@ -9,10 +9,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTests {
+public class LoginTests_Lesson {
 
-    MainPage mainPage;
-    LoginPage loginPage;
+    MainPage_Lesson mainPage;
+    LoginPage_Lesson loginPage;
     private WebDriver driver;
 
     @Before
@@ -27,8 +27,8 @@ public class LoginTests {
 
     @Test
     public void negativeLogin() throws Exception {
-        mainPage = new MainPage(driver);
-        loginPage = new LoginPage(driver);
+        mainPage = new MainPage_Lesson(driver);
+        loginPage = new LoginPage_Lesson(driver);
 
         mainPage.clickLogo();
         mainPage.switchToLoginPage();

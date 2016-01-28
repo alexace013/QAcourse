@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PageFactoryMainPageLesson {
+public class PageFactoryMainPage_Lesson {
 
     WebDriver driver;
 
@@ -21,7 +21,7 @@ public class PageFactoryMainPageLesson {
     @FindBy(css = "div#Content div.closeButton")
     WebElement buttonSpam;
 
-    public PageFactoryMainPageLesson(WebDriver driver) {
+    public PageFactoryMainPage_Lesson(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

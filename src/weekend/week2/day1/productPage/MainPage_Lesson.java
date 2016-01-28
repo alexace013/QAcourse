@@ -2,19 +2,19 @@ package weekend.week2.day1.productPage;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import utils.web._WebElementsActions;
+import weekend.utils.web.WebElementsActions_Lesson;
 
 import java.io.IOException;
 
-public class MainPage {
+public class MainPage_Lesson {
 
     WebDriver driver;
-    _WebElementsActions web;
-    Logger log = Logger.getLogger(MainPage.class);
+    WebElementsActions_Lesson web;
+    Logger log = Logger.getLogger(MainPage_Lesson.class);
 
-    public MainPage(WebDriver driver) {
+    public MainPage_Lesson(WebDriver driver) {
         this.driver = driver;
-        web = new _WebElementsActions(driver);
+        web = new WebElementsActions_Lesson(driver);
     }
 
     public void clickLogo() throws IOException {

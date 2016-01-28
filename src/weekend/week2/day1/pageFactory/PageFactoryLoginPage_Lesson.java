@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PageFactoryLoginPageLesson {
+public class PageFactoryLoginPage_Lesson {
 
     WebDriver driver;
 
@@ -24,7 +24,7 @@ public class PageFactoryLoginPageLesson {
     @FindBy(xpath = ".//div[@id='serverValidationErrors']/ul")
     WebElement errorMessage;
 
-    public PageFactoryLoginPageLesson(WebDriver driver) {
+    public PageFactoryLoginPage_Lesson(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

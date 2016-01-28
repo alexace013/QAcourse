@@ -10,14 +10,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class PageFactoryLoginTestLesson {
+public class PageFactoryLoginTest_Lesson {
 
     private static String EMAIL = "alex_ace@ukr.net";
     private static String PASSWORD = "a1989";
 
     WebDriver driver;
-    PageFactoryMainPageLesson pageFactoryMainPage;
-    PageFactoryLoginPageLesson pageFactoryLoginPage;
+    PageFactoryMainPage_Lesson pageFactoryMainPage;
+    PageFactoryLoginPage_Lesson pageFactoryLoginPage;
 
     @Before
     public void setUp() {
@@ -34,12 +34,12 @@ public class PageFactoryLoginTestLesson {
     @Test
     public void testMethod1() throws IOException {
 
-        pageFactoryMainPage = new PageFactoryMainPageLesson(driver);
+        pageFactoryMainPage = new PageFactoryMainPage_Lesson(driver);
         pageFactoryMainPage.closeBlurb();
         pageFactoryMainPage.clickLogoLink();
         pageFactoryMainPage.switchToLoginPage();
 
-        pageFactoryLoginPage = new PageFactoryLoginPageLesson(driver);
+        pageFactoryLoginPage = new PageFactoryLoginPage_Lesson(driver);
         pageFactoryLoginPage.fillEmailFiled(EMAIL);
         pageFactoryLoginPage.fillPassFiled(PASSWORD);
         pageFactoryLoginPage.clickLoginButton();

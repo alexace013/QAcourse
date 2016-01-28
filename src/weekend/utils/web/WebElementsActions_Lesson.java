@@ -1,17 +1,17 @@
-package utils.web;
+package weekend.utils.web;
 
-import utils.ConfigData;
+import weekend.utils.ConfigData_Lesson;
 import org.openqa.selenium.interactions.Actions;
-import utils.web.exceptions.NoElementFound;
+import weekend.utils.web.exceptions.NoElementFound_Lesson;
 import org.openqa.selenium.*;
 
 import java.io.IOException;
 
-public class _WebElementsActions {
+public class WebElementsActions_Lesson {
 
     WebDriver driver;
 
-    public _WebElementsActions(WebDriver driver) {
+    public WebElementsActions_Lesson(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -27,7 +27,7 @@ public class _WebElementsActions {
      */
     public void input(String inputLocator, String inputData) throws IOException {
 //        driver.findElement(ConfigurationData11.ui(inputLocator)).clear();
-        driver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
+        driver.findElement(ConfigData_Lesson.ui(inputLocator)).sendKeys(inputData);
     }
 
     /**
@@ -40,7 +40,7 @@ public class _WebElementsActions {
             driver.findElement(By.xpath(inputLocator)).clear();
             driver.findElement(By.xpath(inputLocator)).sendKeys(inputData);
             driver.findElement(By.xpath(inputLocator)).sendKeys(Keys.ENTER);
-        } catch (NoElementFound noElementFound) {
+        } catch (NoElementFound_Lesson noElementFound) {
             noElementFound.printStackTrace();
         }
 
@@ -50,18 +50,18 @@ public class _WebElementsActions {
      * Click a button
      */
     public void clickButton(String buttonLocator) throws IOException {
-        driver.findElement(ConfigData.ui(buttonLocator)).click();
+        driver.findElement(ConfigData_Lesson.ui(buttonLocator)).click();
     }
 
     public void click(String link) throws IOException {
-        driver.findElement(ConfigData.ui(link)).click();
+        driver.findElement(ConfigData_Lesson.ui(link)).click();
     }
 
     /**
      * Click link
      */
     public void clickLink(String linkLocator) throws IOException {
-        driver.findElement(ConfigData.ui(linkLocator)).click();
+        driver.findElement(ConfigData_Lesson.ui(linkLocator)).click();
     }
 
     public void moveToElementAndClick(String movToLocator, String clickToElement) throws IOException {
@@ -70,7 +70,7 @@ public class _WebElementsActions {
 
         try {
             webElement = driver.findElement(By.xpath(movToLocator));
-        } catch (NoElementFound noElementFound) {
+        } catch (NoElementFound_Lesson noElementFound) {
             noElementFound.printStackTrace();
         }
 
@@ -116,7 +116,7 @@ public class _WebElementsActions {
 
     public boolean isElementPresentConfig(String elementLocator) throws IOException {
 
-        if (!driver.findElement(ConfigData.ui(elementLocator)).isDisplayed()) {
+        if (!driver.findElement(ConfigData_Lesson.ui(elementLocator)).isDisplayed()) {
             return false;
         }
 
@@ -178,8 +178,8 @@ public class _WebElementsActions {
     }
 
     public void clearAndInputWithConfigData(String inputLocator, String inputData) throws IOException {
-        driver.findElement(ConfigData.ui(inputLocator)).clear();
-        driver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
+        driver.findElement(ConfigData_Lesson.ui(inputLocator)).clear();
+        driver.findElement(ConfigData_Lesson.ui(inputLocator)).sendKeys(inputData);
     }
 
 

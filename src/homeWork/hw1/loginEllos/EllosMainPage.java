@@ -2,19 +2,19 @@ package homeWork.hw1.loginEllos;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import utils.web._WebElementsActions;
+import weekend.utils.web.WebElementsActions_Lesson;
 
 import java.io.IOException;
 
 public class EllosMainPage {
 
     WebDriver driver;
-    _WebElementsActions web;
+    WebElementsActions_Lesson web;
     Logger log = Logger.getLogger(EllosMainPage.class);
 
     public EllosMainPage(WebDriver driver) {
         this.driver = driver;
-        web = new _WebElementsActions(driver);
+        web = new WebElementsActions_Lesson(driver);
     }
 
     public void clickLogo() {

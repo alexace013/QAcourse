@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigurationData {
+public class ConfigurationData12 {
 
     public static String uiMappingFile =
             "/media/alexander/HDD/Workspace/Projects/QA/QAcourse/src/homeWork/hw2/UIMapping.properties";
@@ -17,7 +17,7 @@ public class ConfigurationData {
     /**
      * @info DEFAULT constructor without parameters, where the properties are initialized
      */
-    public ConfigurationData() {
+    public ConfigurationData12() {
         properties = new Properties();
     }
 
@@ -26,7 +26,7 @@ public class ConfigurationData {
      * @throws IOException if mapFileName incorrect or null
      * @info Constructor with parameter
      */
-    public ConfigurationData(String mapFileName) {
+    public ConfigurationData12(String mapFileName) {
 
         this(); // call the DEFAULT constructor
         this.mapFileName = mapFileName;

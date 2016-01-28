@@ -42,7 +42,7 @@ public class EllosLoginTest {
 //        loginPage = new EllosLoginPage(driver);
 //
 //        mainPage.clickLogo();
-//        mainPage.switchToLoginPage();
+//        mainPage.switchToRegistrationPage();
 //
 //        loginPage.fillLoginField("qwerty@ukr.net");
 //        loginPage.fillPasswordField("12345");
